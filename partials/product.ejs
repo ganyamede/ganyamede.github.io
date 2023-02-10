@@ -1,0 +1,66 @@
+<div>
+    <div style="padding: 45px;">
+        <% data.forEach(function(item) { %>
+            <img src="<%=item.photo%>" class="img-thumbnail p-1 height">
+            <h1 class="font">
+                <%=item.name%>
+            </h1>
+            <h5 class="font">
+                <%-item.description%>
+            </h5>
+            <p>
+                <%=item.data%>
+            </p>
+            <div class="share-buttons">
+                <button
+                    class="btn  btn-outline-primary"
+                    onClick='window.open("https://www.facebook.com/sharer.php?u=https://127.0.0.1:8080/news/<%=item.url%>","sharer","status=0,toolbar=0,width=650,height=500");'
+                    title="Поделиться в Facebook">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png" height="32">
+                </button>
+                <button
+                    class="btn btn-outline-primary"
+                    onClick='window.open("https://vk.com/share.php?url=https://127.0.0.1:8080/news/<%=item.url%>","sharer","status=0,toolbar=0,width=650,height=500");'
+                    title="Поделиться Вконтакте">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/VK_Compact_Logo_%282021-present%29.svg/2048px-VK_Compact_Logo_%282021-present%29.svg.png" height="32">
+                </button>
+                <button
+                    class="btn btn-outline-warning"
+                    onClick='window.open("https://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl=https://127.0.0.1:8080/news/<%=item.url%>&st.comments=ОПИСАНИЕ","sharer","status=0,toolbar=0,width=650,height=500");'
+                    title="Поделиться в Одноклассниках">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Odnoklassniki.svg/1029px-Odnoklassniki.svg.png" height="32">
+        
+                </button>
+                <button
+                    class="btn btn-outline-primary"
+                    onClick='window.open("https://telegram.me/share/url?url=https://127.0.0.1:8080/news/<%=item.url%>","sharer","status=0,toolbar=0,width=650,height=500");'
+                    title="Поделиться в Телеграм">
+                    <img src="https://cdn2.downdetector.com/static/uploads/logo/t_logo-1.png" height="32">
+        
+                </button>
+                <button
+                    class="btn btn-outline-danger"
+                    onClick='window.open("https://ru.pinterest.com/pin/create/button/?url=https://127.0.0.1:8080/news/<%=item.url%>","sharer","status=0,toolbar=0,width=650,height=500");'
+                    title="Запинить">
+                    <img src="https://th.bing.com/th/id/OIP.iYkU34DJGjUQPDg4IGvxVgHaHa?pid=ImgDet&rs=1" height="32">
+        
+                </button>
+                <button
+                    class="btn btn-outline-primary"
+                    onClick='window.open("https://twitter.com/intent/tweet?text=https://127.0.0.1:8080/news/<%=item.url%>. ОПИСАНИЕ. СССЫЛКА","sharer","status=0,toolbar=0,width=650,height=500");'
+                    title="Твитнуть">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png" height="32">
+        
+                </button>
+                <button
+                    class="btn btn-outline-primary"
+                    onClick='window.open("https://connect.mail.ru/share?url=https://127.0.0.1:8080/news/<%=item.url%>","sharer","status=0,toolbar=0,width=650,height=500");'
+                    title="Поделиться в @Мой мир">
+                    <img src="https://th.bing.com/th/id/R.60ddc453182c6085aeb2f0c4c191ed34?rik=rMNhiFnqo0bdtg&riu=http%3a%2f%2ftoplogos.ru%2fimages%2flogo-moy-mir.jpg&ehk=veUxbVmgOy%2bBli7lEJZrbE0%2f%2fQFyHceb9tsdfAZSi1o%3d&risl=&pid=ImgRaw&r=0" height="32">
+                </button>
+            </div>
+    </div>
+    
+    <% }); %>
+
+</div>

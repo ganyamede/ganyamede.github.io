@@ -1,0 +1,59 @@
+<p class='pt-5 font-2' style="font-size: 20px;" align="center">Втрати русни станом на <%=getDate + '/' + getMonth%></p>
+
+<table class="table table-bordered w-75 mx-auto mt-2">
+    <thead>
+        <tr>
+            <th class="table-danger">Танки</th>
+            <th class="table-danger">ББМ</th>
+            <th class="table-danger">РСЗО </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="table-success"><%=tanks%></td>
+            <td class="table-success"><%=armoured_fighting_vehicles%></td>
+            <td class="table-success"><%=mlrs%></td>
+        </tr>
+        <tr>
+            <thead>
+                <th class="table-danger">ПВО</th>
+                <th class="table-danger">Самолеты</th>
+                <th class="table-danger">БПЛА</th>
+            </thead>
+        </tr>
+
+        <tr>
+            <td class="table-success"><%=aa_warfare_systems%></td>
+            <td class="table-success"><%=planes%></td>
+            <td class="table-success"><%=uav_systems%></td>
+        </tr>
+        <tr>
+            <thead>
+                <th class="table-danger">Корабли</th>
+                <th class="table-danger">Автомобили и автоцистерны</th>
+                <th class="table-danger">Специальная техника</th>
+            </thead>
+        </tr>
+        <tr>
+            <td class="table-success"><%=warships_cutters%></td>
+            <td class="table-success"><%=vehicles_fuel_tanks%></d>
+            <td class="table-success"><%=special_military_equip%></td>
+        </tr>
+
+        <tr>
+            <thead>
+                <th class="table-danger">Артиллерия </th>
+                <th class="table-danger">Вертолеты</th>
+                <th class="table-danger">Личный состав</th>
+            </thead>
+        </tr>
+        <tr>
+            <td class="table-success"><%=artillery_systems%></td>
+            <td class="table-success"><%=helicopters%></td>
+            <td class="table-success"><%=personnel_units%></td>
+        </tr>
+
+    </tbody>
+</table>
+

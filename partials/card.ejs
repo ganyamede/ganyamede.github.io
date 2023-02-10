@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row mx-auto pt-2 width" >
+
+    <% data.forEach(function(item) { %>
+      <div class="col-sm-6 pt-2">
+        <div class="card">
+          <img class="card-img-top" height="260" src="<%=item.photo%>">
+          <div class="card-body">
+            <a class="h5 card-title text-dark text-decoration-none" href='/news/<%=item.url%>'><p class="size"><%=item.name%></p></a>
+            <p class="card-text size"><%=item.description%></p>
+            <a href='/news/<%=item.url%>'><button type="button" class="btn btn-warning" >Подробнее</button></a>
+            <% if (login) { %>
+              <a href='/delete/<%=item.url%>'><button type="button" class="btn btn-danger">Удалить</button></a>
+              <a href='/edit/<%=item.url%>'><button type="button" class="btn btn-warning">Изменить</button></a>
+              <% } %>
+              <p class="card-text pt-2"><small class="text-muted"><%=item.data%></small></p>
+              <small class="text-muted"><img src='https://cdn-icons-png.flaticon.com/512/159/159604.png' class="px-2 mb-1" height="16"><%=item.view%> просмотров</small>
+            </div>
+        </div>
+      </div>
+      
+      
+    <% }); %>
+
+
+  </div>
+</div>
