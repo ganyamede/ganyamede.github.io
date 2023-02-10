@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ../partials/head %>
+</head>
+<body>
+    <%- include ../partials/navbar %>
+    <form method="post" class="mx-auto width-2">
+        <% data.forEach(function(item) { %>
+            <h3 class="font">Изменить пост</h3>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="photo" placeholder="Ссылку на фото" value="<%=item.photo%>">
+            <input type="text" class="form-control" style="margin-top: 10px;" id="exampleInputEmail1" name="name" placeholder="Название поста" value="<%=item.name%>">
+            <textarea type="text" class="form-control" style="margin-top: 10px;" id="editor" name="description" placeholder="Описание"><%=item.description%></textarea>
+            <input type="text" class="form-control" style="margin-top: 10px;" id="exampleInputEmail1" name="url" value="<%=item.url%>" disabled>
+            <button type="submit" class="btn btn-warning" style="margin-top: 10px;">Изменить пост</button>        
+        <% }) %>
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ../partials/head %>
+</head>
+<body>
+    <%- include ../partials/navbar %>
+    <form method="post" class="mx-auto width-2">
+        <h3 class="font">Создание нового поста</h3>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="photo" placeholder="Ссылку на фото">
+        <input type="text" class="form-control" style="margin-top: 10px;" id="exampleInputEmail1" name="name" placeholder="Название поста">
+        <textarea type="text" class="form-control" style="margin-top: 10px;" id="exampleInputEmail1" name="description" placeholder="Описание"></textarea>
+        <button type="submit" class="btn btn-warning" style="margin-top: 10px;">Создать новый пост</button>        
+    </form>
+</body>
+</html>
